@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="eng-rus">
+    <head>
+        <title>Confirm</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'Confirm.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div id="left">
+                <div class="logo">
+                    <img id="aitu" src="{% static 'white.png' %}">
+                </div>
+            </div>
+            <div id="right">
+                <div id="tick">
+                    <div>
+                        <img src="{% static 'tick.png' %}">
+                    </div>
+                    <div> 
+                        <h1> Регистрация пройдена! </h1>
+                        <p> Подтвердите регистрацию через введённую почту </p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

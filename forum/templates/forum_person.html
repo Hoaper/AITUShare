@@ -1,0 +1,96 @@
+{% extends 'forum_base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'view.css' %}">
+{% endblock %}
+{% block content %}
+
+    <main>
+    <div class="topics">
+            <div>
+                <h3>{{ topic.title }}</h3>
+            </div>
+            <div class="snd">
+                <a href="{% url 'profile_index' %}/{{ topic.author.login }}"><p>{{ topic.author.first_name }}</p></a>
+            </div>
+            <div class="snd">
+                <p> {{ topic.date }} </p>
+            </div>
+        </div>
+        <div class="topic">
+            <p> {{ topic.text | safe }} </p>
+        </div>
+
+        <div class="writecomm">
+            {% if login %}
+            <div class="infosection2">
+                <div class="icon">
+                    <img src="{% static 'icon.png' %}">
+                </div>
+                <div class="name">
+                    <h5> {{ first_name }} <br> {{ last_name }} </h5>
+                    <p></p>
+                </div>
+            </div>
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form.visible_fields %}
+                    {{ field }}
+                {% endfor %}
+                <input type="submit" class="submit" value="Оставить комментарий">
+            </form>
+            {% endif %}
+        </div>
+
+        {% for comment in comments %}
+            <div class="viewcomm">
+                <div class="writecomm">
+                    <div class="infosection1">
+                        <div class="icon">
+                            <img src="{% static 'icon.png' %}">
+                        </div>
+                        <div class="name">
+                            <h5> {{ comment.author.first_name }} <br> {{ comment.author.last_name }}</h5>
+                        </div>
+                        <div class="commblock">
+                            <p> {{ comment.text }} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+    </main>
+        <aside>
+
+        <div class="upsidebar">
+        {% if login %}
+            <div>
+                <div class="pfp">
+                    <img src="{% static 'icon.png' %}">
+                </div>
+                <div class="info">
+                    <h4> {{ first_name }} {{ last_name }}</h4>
+                    <p> {{ email }} </p>
+                </div>
+            </div>
+        {% else %}
+            <a href="{% url 'login_page' %}">
+                Click me to not forget to log in this forum to leave a comments <3
+            </a>
+        {% endif %}
+        </div>
+
+{#        <div class="lowersidebar">#}
+{#            <a href="view.html" target="_blank">#}
+{#                <div class="latest">#}
+{#                    <h4> Name 2nd_Name </h4>#}
+{#                  </div>#}
+{#                  <div class="wtf">#}
+{#                      <p> Topic Name </p>#}
+{#                  </div>#}
+{#            </a>#}
+{#            <hr>#}
+{#        </div>#}
+    </aside>
+{% endblock %}

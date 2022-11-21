@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f5f6f7;
+    font-family: 'Raleway', sans-serif;
+    color: #171E20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+body a {
+    text-decoration: none;
+} 
+
+main, aside {
+    display: inline-block;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+main {
+    width: 75%;
+}
+
+aside {
+    margin-left: 20px;
+    width: 25%;
+}
+
+.infotopic {
+    background-color: #076585;
+    color: #f5f6f7;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.topics {
+    border: #bababa 2px solid;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding: 20px;
+}
+
+.upsidebar {
+    padding: 7px;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    border: solid 2px #bababa;
+}
+
+.upsidebar a{
+    color: #171E20;
+}
+
+.pfp, .info {
+    display: inline-block;
+}
+
+.info {
+    margin-left: 10px; 
+}
+
+.topic {
+    padding: 20px;
+    border: 2px #bababa solid;
+    height: 100px;
+}
+
+.writecomm {
+    padding: 20px;
+    border: 2px solid #bababa;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.icon, .name {
+    display: inline-block;
+}
+
+.icon img{
+    height: 80%;
+    width: 80%;
+}
+
+
+.infosection1, .name, .commblock {
+    display: inline-block;
+}
+
+.infosection2, .submit, .commentsection {
+    display: inline-block;
+    margin-right: 60px;
+}
+form {
+    display: flex;
+
+}
+input[type="text"] {
+    padding: 5px;
+    height: 50px;
+    width: 300px;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+}
+
+input[type = "submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    border: 2px solid #076585;
+    color: #f5f6f7;
+    background-color: #076585;
+    text-align: center;
+    background-color: none;
+    padding: 14px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+
+.submit input[type = "submit"]:hover {
+    color: #076585;
+    background-color: #f5f6f7;
+}
+
+
+.lowersidebar {
+    margin-top: 8.5px;
+    border: solid 2px #bababa;
+    padding: 7px;
+}
+
+.lowersidebar a {
+    color: #171E20;
+}
+
+.wtf {
+    margin-top: 5px;
+}
+

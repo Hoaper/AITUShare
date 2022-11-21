@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="eng-rus">
+    <head>
+        <title>Forum</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'forumbase.css' %}">
+        {% block styles %}{% endblock %}
+    </head>
+    <body style="flex-direction: column">
+        <header>
+            <div class="leftmenu">
+                <img src="{% static 'white.png' %}">
+            </div>
+            <div class="rightmenu">
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'forum_index' %}">Forum</a></li>
+                    {% if login %}
+                        <li><a href="{% url 'profile_index' %}">My profile</a></li>
+                        <li><a href="{% url 'logout' %}">Log out</a></li>
+                    {% else %}
+                        <li><a href="{% url 'login_page' %}">Log in</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </header>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f5f6f7;
+    color: #171E20;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    background-color: #076585;
+}
+
+#content{
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.leftmenu {
+    margin-right: 450px; 
+}
+.leftmenu img {
+    width: 148.34px;
+    height: 74.63px;
+}
+
+.rightmenu li {
+    display: inline-block;
+    list-style: none;
+    font-size: 20px;
+    margin-right: 30px;
+    font-weight: 400px;
+}
+
+.rightmenu a {
+    text-decoration: none;
+    color: #f5f6f7;
+}
+
+main {
+    margin-top: 250px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 64px;
+}
+
+h2 {
+    margin-right: 2px;
+    display: inline-block;
+    font-size: 38px;
+    letter-spacing: 1.5px;
+}
+
+#aituforum {
+    color: #076585;
+}
+
+.buttons a{
+    text-decoration: none;
+    color:#171E20;
+    font-family: 'Raleway', sans-serif;
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #171E20;
+    text-align: center;
+    padding: 14px 10px;
+    width: 100px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.buttons a:hover {
+    background-color: #076585;
+    color: #f5f6f7;
+    border-color: #076585;
+}
+
+

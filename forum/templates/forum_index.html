@@ -1,0 +1,76 @@
+{% extends 'forum_base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'topics.css' %}">
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="infotopic">
+
+            <div  id="fst">
+                <h3> Topic </h3>
+            </div>
+            <div class="snd">
+                <p> Date </p>
+            </div>
+            <div class="snd">
+                <p> User </p>
+            </div>
+        </div>
+        {% for topic in topics %}
+            {% for pic in topic %}
+            <div class="topics">
+                <div onclick="window.location.href='{% url 'forum_index' %}/{{ pic.id }}'" style="cursor: pointer;">
+                    <h3>{{ pic.title }}</h3>
+                </div>
+                <div class="snd">
+                    <p>{{ pic.date }}</p>
+                </div>
+                <div class="snd">
+                    <p> {{ pic.author.first_name }} </p>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        {% endfor %}
+
+    </main>
+    <aside>
+
+        <div class="upsidebar">
+        {% if login %}
+            <div>
+                <div class="pfp">
+                    <img src="{% static 'icon.png' %}">
+                </div>
+                <div class="info">
+                    <h4> {{ first_name }} {{ last_name }}</h4>
+                    <p> {{ email }} </p>
+                </div>
+            </div>
+            <a href="{% url 'create_topic' %}">
+                Create new topic
+            </a>
+        {% else %}
+            <a href="{% url 'login_page' %}">
+                Click me to not forget to log in this forum to leave a comments <3
+            </a>
+        {% endif %}
+        </div>
+
+{#        <div class="lowersidebar">#}
+{#            <a href="view.html" target="_blank">#}
+{#                <div class="latest">#}
+{#                    <h4> Name 2nd_Name </h4>#}
+{#                  </div>#}
+{#                  <div class="wtf">#}
+{#                      <p> Topic Name </p>#}
+{#                  </div>#}
+{#            </a>#}
+{#            <hr>#}
+{#        </div>#}
+    </aside>
+{% endblock %}

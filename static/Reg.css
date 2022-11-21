@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f5f6f7;
+    font-family: 'Raleway', sans-serif;
+    color: #171E20;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
+#left {
+    height: 100vh;
+    width: 40%;
+    background-color: #076585;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;    
+}
+
+#left div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;    
+}
+
+#right {
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+} 
+
+.registr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+}
+
+#right div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+}
+
+#log {
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.lol {
+    padding: 10px;
+    width: 350px;
+    height: 450px;
+    border-radius: 5%;
+    box-shadow: 0px 4px 16px #ccc;
+    letter-spacing: 1px;
+    position: abosolute;
+    text-align: center;
+}
+
+.lol input[type= "text"], .lol input[type = "password"] {
+    font-family: 'Raleway', sans-serif;
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #171E20;
+    text-align: center;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.lol input[type= "text"]:focus, .lol input[type = "password"]:focus {
+    width: 240px;
+    border-color: #076585;
+}
+
+.lol input[type = "submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #076585;
+    color: #f5f6f7;
+    background-color: #076585;
+    text-align: center;
+    background-color: none;
+    padding: 14px 40px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+
+.lol input[type = "submit"]:hover {
+    color: #076585;
+    background-color: #f5f6f7;
+}

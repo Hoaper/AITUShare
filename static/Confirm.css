@@ -1,0 +1,57 @@
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f5f6f7;
+    font-family: 'Raleway', sans-serif;
+    color: #171E20;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
+#left {
+    height: 100vh;
+    width: 40%;
+    background-color: #076585;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;    
+}
+
+#left div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;    
+}
+
+#right {
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+} 
+
+#right div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+}
+
+#tick div {
+    margin-top: 0px;
+}
+
+

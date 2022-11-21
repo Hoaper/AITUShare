@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="eng-rus">
+    <head>
+        <title>Registration</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'Reg2.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+    </head>
+    
+    <!-- #076585;-->
+    
+    <body>
+        <div class="container">
+            <div id="left">
+                <div class="logo" onclick="window.location.href='{% url 'index' %}'" style="cursor: pointer;">
+                    <img id="aitu" src="{% static 'white.png' %}">
+                </div>
+            </div>
+            <div id="right">
+                <div class="registr">
+                    <div class="lol">
+                        <div id="log">
+                            <h1> Sign Up </h1>
+                        </div>
+                        {% if err %}
+                            {{ err }}
+                        {% endif %}
+                        <form class="input" method="post">
+                            {% csrf_token %}
+                            {{ form }}
+                            <input type="submit" value="Sign up">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

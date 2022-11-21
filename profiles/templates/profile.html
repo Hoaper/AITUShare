@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ profile.login }}'s Profile</title>
+    <style>
+
+        h1, h3 {
+            width: fit-content;
+        }
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background-color: #076585;
+
+        }
+        body {
+            height: 98vh;
+            color: #f5f6f7;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+            color: azure;
+        }
+        a:hover {
+            color: #c7efef;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hello, {{ profile.login }}!</h1>
+        <h3>Sorry, but we are still working on profile page</h3>
+        <h3>Have a good discussing!</h3>
+        <h3><a href="{% url 'forum_index' %}">Go to forum</a></h3>
+    </div>
+</body>
+</html>

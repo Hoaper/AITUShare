@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="eng-rus">
+    <head>
+        <title>Аuthorization</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'Reg.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div id="left">
+                <div class="logo" onclick="window.location.href='{% url 'index' %}'" style="cursor: pointer;">
+                    <img id="aitu" src="{% static 'white.png' %}">
+                </div>
+            </div>
+            <div id="right">
+                <div class="registr">
+                    <div class="lol">
+                        <div id="log">
+                            <h1> Log In </h1>
+                        </div>
+                        <form class="input" method="post">
+                            {% csrf_token %}
+                            {{ form }}
+                            <input type="submit", value="Log in">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

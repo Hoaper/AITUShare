@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f5f6f7;
+    font-family: 'Raleway', sans-serif;
+    color: #171E20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+body a {
+    text-decoration: none;
+} 
+
+main, aside {
+    display: inline-block;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+main {
+    width: 75%;
+}
+
+aside {
+    margin-left: 20px;
+    width: 25%;
+}
+
+select {
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+    width: 150px;
+    border-radius: 30px;
+    border: #076585 solid 2px;
+    background-color: #076585;
+    color: #f5f6f7;
+    cursor: pointer;
+}
+
+.topics {
+    border: #bababa 2px solid;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.topics div {
+    margin-top: 50px;
+}
+
+.create {
+    display: flex;
+    flex-direction: column;
+}
+
+.create input{
+    margin-top: 30px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    height: 20px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    height: 60px;
+}
+
+.upsidebar {
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px #bababa;
+}
+
+.upsidebar a{
+    color: #171E20;
+}
+
+.pfp, .info {
+    display: inline-block;
+}
+
+.info {
+    margin-left: 10px; 
+}
+
+.submit input[type = "submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    border: 2px solid #076585;
+    color: #f5f6f7;
+    background-color: #076585;
+    text-align: center;
+    background-color: none;
+    padding: 14px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+
+.submit input[type = "submit"]:hover {
+    color: #076585;
+    background-color: #f5f6f7;
+}
+
+.lowersidebar {
+    margin-top: 8.5px;
+    border: solid 2px #bababa;
+    padding: 7px;
+}
+
+.lowersidebar a {
+    color: #171E20;
+}
+
+.wtf {
+    margin-top: 5px;
+}
+

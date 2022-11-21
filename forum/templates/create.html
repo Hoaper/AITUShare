@@ -1,0 +1,48 @@
+{% extends 'forum_base.html' %}
+{% load static %}
+{% block styles %}
+        <link rel="stylesheet" href="{% static 'create.css' %}">
+{% endblock %}
+{% block content %}
+        <main>
+            <div class="topics">
+                <form method="post">
+                    <div class="imdone">
+                        <h3>Topic creation</h3>
+                    </div>
+                    <div class="create">
+                        {% csrf_token %}
+                        <label>Tittle</label>
+                        {{ form.tittle }}
+                        <br>
+                        <label>Text</label>
+                        {{ form.text }}
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div> 
+        </main>
+        <aside>
+
+            <div class="upsidebar">
+            {% if login %}
+                <div>
+                    <div class="pfp">
+                        <img src="{% static 'icon.png' %}">
+                    </div>
+                    <div class="info">
+                        <h4> {{ first_name }} {{ last_name }}</h4>
+                        <p> {{ email }} </p>
+                    </div>
+                </div>
+            {% else %}
+                <a href="{% url 'login_page' %}">
+                    Click me to not forget to log in this forum to leave a comments <3
+                </a>
+            {% endif %}
+            </div>
+
+        </aside>
+{% endblock %}
